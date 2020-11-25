@@ -1,117 +1,341 @@
-<!DOCTYPE html>
-<html>
-<title>팀 텝! 디스코드를 더욱 더 즐겁게!</title>
-<meta charset="UTF-8">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://raw.githubusercontent.com/OHvrything/thingEbotWebsite/main/favicon.ico" type="image/x-icon">
-<link rel="icon" href="https://raw.githubusercontent.com/OHvrything/thingEbotWebsite/main/favicon.ico" type="image/x-icon">
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<!--
+VIEW IN FULL SCREEN MODE
+FULL SCREEN MODE: http://salehriaz.com/404Page/404.html
+
+DRIBBBLE: https://dribbble.com/shots/4330167-404-Page-Lost-In-Space
+-->
 <style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
-section {
-  width: 100%;
-  height: 100%;
+  /*
+VIEW IN FULL SCREEN MODE
+FULL SCREEN MODE: http://salehriaz.com/404Page/404.html
+
+DRIBBBLE: https://dribbble.com/shots/4330167-404-Page-Lost-In-Space
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Dosis:300,400,500');
+
+@-moz-keyframes rocket-movement { 100% {-moz-transform: translate(1200px,-600px);} }
+@-webkit-keyframes rocket-movement {100% {-webkit-transform: translate(1200px,-600px); } }
+@keyframes rocket-movement { 100% {transform: translate(1200px,-600px);} }
+@-moz-keyframes spin-earth { 100% { -moz-transform: rotate(-360deg); transition: transform 20s;  } }
+@-webkit-keyframes spin-earth { 100% { -webkit-transform: rotate(-360deg); transition: transform 20s;  } }
+@keyframes spin-earth{ 100% { -webkit-transform: rotate(-360deg); transform:rotate(-360deg); transition: transform 20s; } }
+
+@-moz-keyframes move-astronaut {
+    100% { -moz-transform: translate(-160px, -160px);}
 }
-</style>
-<body class="w3-light-grey w3-content" style="max-width:1600px">
-
-<!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
-  <div class="w3-container">
-    <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
-      <i class="fas fa-window-close"></i>
-    </a>
-    <img src="https://github.com/OHvrything/thingEbotWebsite/blob/main/%ED%85%9D%20%EB%A1%9C%EA%B3%A0.jpg?raw=true" style="width:45%;" class="w3-round"><br><br>
-    <h4><b>팀 텝</b></h4>
-    <p class="w3-text-grey"></p>
-  </div>
-  <div class="w3-bar-block animate__animated animate__lightSpeedInLeft">
-    <a href="#top" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fas fa-home fa-fw w3-margin-right"></i>홈</a>
-    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>봇에 대하여</a>
-    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>문의하기</a>
-  </div>
-</nav>
-
-<!-- Overlay effect when opening sidebar on small screens -->
-<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
-
-<!-- !PAGE CONTENT! -->
-<div class="w3-main" style="margin-left:300px">
-
-  <!-- Header -->
-  <header id="portfolio">
-    <a href="#" class="animate__animated animate__backInDown"><img src="https://github.com/OHvrything/thingEbotWebsite/blob/main/%ED%85%9D%20%EB%A1%9C%EA%B3%A0.jpg?raw=true" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
-    <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span><b style="font-size: 24px;">텝! 디스코드를 더욱더 즐겁게!<b>
-  </header>
-<section id="top" style="background: lightblue" class="section"><h1 class="animate__animated animate__fadeInLeft">안녕하세요!<br>디스코드를 더욱더 즐겁게,<br>저희는 팀 텝 입니다!</h1><style>
-.button {
-  background-color: #4CAF50; /* Green */
-  border: none;
-  color: white;
-  padding: 16px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  transition-duration: 0.4s;
-  cursor: pointer;
+@-webkit-keyframes move-astronaut {
+    100% { -webkit-transform: translate(-160px, -160px);}
+}
+@keyframes move-astronaut{
+    100% { -webkit-transform: translate(-160px, -160px); transform:translate(-160px, -160px); }
+}
+@-moz-keyframes rotate-astronaut {
+    100% { -moz-transform: rotate(-720deg);}
+}
+@-webkit-keyframes rotate-astronaut {
+    100% { -webkit-transform: rotate(-720deg);}
+}
+@keyframes rotate-astronaut{
+    100% { -webkit-transform: rotate(-720deg); transform:rotate(-720deg); }
 }
 
-.button1 {
-  background-color: white;
-  color: black;
-  border: 2px solid #4CAF50;
+@-moz-keyframes glow-star {
+    40% { -moz-opacity: 0.3;}
+    90%,100% { -moz-opacity: 1; -moz-transform: scale(1.2);}
+}
+@-webkit-keyframes glow-star {
+    40% { -webkit-opacity: 0.3;}
+    90%,100% { -webkit-opacity: 1; -webkit-transform: scale(1.2);}
+}
+@keyframes glow-star{
+    40% { -webkit-opacity: 0.3; opacity: 0.3;  }
+    90%,100% { -webkit-opacity: 1; opacity: 1; -webkit-transform: scale(1.2); transform: scale(1.2); border-radius: 999999px;}
 }
 
-.button1:hover {
-  background-color: #4CAF50;
-  color: white;
+.spin-earth-on-hover{
+    
+    transition: ease 200s !important;
+    transform: rotate(-3600deg) !important;
 }
 
-.button2 {
-  background-color: white;
-  color: black;
-  border: 2px solid #008CBA;
+html, body{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 300;
+    -webkit-user-select: none; /* Safari 3.1+ */
+    -moz-user-select: none; /* Firefox 2+ */
+    -ms-user-select: none; /* IE 10+ */
+    user-select: none; /* Standard syntax */
 }
 
-.button2:hover {
-  background-color: #008CBA;
-  color: white;
-</style>
-<div class="animate__animated animate__bounceInLeft"><a href="http://invite.thingebot.kro.kr" target="_blank"><button class="button button1">봇 초대</button></a>
-<a href="https://discord.gg/nrsVh8EUHE" target="_blank"><button class="button button2">지원 서버</button></a><a href="https://koreanbots.dev/bots/776239926684811314" target="_blank"><button class="button button1">한국 디스코드봇 리스트</button></a>
-<a href="https://top.gg/bot/776239926684811314"><button class="button button2">탑지지(top.gg)</button></a><a href="https://ohvrything.github.io/thingEbotWebsite/blog/" target="_blank"><button class="button button1">공식 블로그</button></a><a href="https://tec.thingebot.kro.kr"><button class="button button2">텍!(ThingEbotCast)</button></a></div>
-</section>
-<section id="about" style="background: orange;overflow: scroll;" class="section"><h1 class="animate__animated animate__fadeInLeft">봇에 대하여!</h1>
-<pre class="animate__animated animate__bounceInLeft">저희 팀 텝은 디스코드 봇 띵이봇을 서비스하고 있어요!
-그리고 띵이봇은 카카오톡에서도 사용할 수 있지요~
-지금은 팀 텝 비밀 프로젝트를 진행하고 있답니다!</pre>
-</section>
-<section id="contact" style="background: purple" class="section">
-<h1 class="animate__animated animate__fadeInLeft">문의하기</h1>
-<h3 class="animate__animated animate__bounceInLeft">아래의 공식적인 방법으로 문의 해 주세요!</h3>
-<h1 class="animate__animated animate__bounceInLeft"><a href="https://pf.kakao.com/_RIxkjT"><i class="fas fa-comments"></i>카카오톡 채널</a><br><a href="mailto:every@afmail.kro.kr"><i class="fas fa-envelope"></i>이메일 보내기</a><br><iframe src="https://canary.discord.com/widget?id=776633442540060672&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe></h1>
-</section>
-<a href="easteregg.html"><font color="white">???</font></a>
-<!-- End page content -->
-</div>
-
-<script>
-// Script to open and close sidebar
-function w3_open() {
-    document.getElementById("mySidebar").style.display = "block";
-    document.getElementById("myOverlay").style.display = "block";
+.bg-purple{
+    background: url(http://salehriaz.com/404Page/img/bg_purple.png);
+    background-repeat: repeat-x;
+    background-size: cover;
+    background-position: left top;
+    height: 100%;
+    overflow: hidden;
+    
 }
 
-function w3_close() {
-    document.getElementById("mySidebar").style.display = "none";
-    document.getElementById("myOverlay").style.display = "none";
+.custom-navbar{
+    padding-top: 15px;
 }
-</script>
-</body>
-</html>
+
+.brand-logo{
+    margin-left: 25px;
+    margin-top: 5px;
+    display: inline-block;
+}
+
+.navbar-links{
+    display: inline-block;
+    float: right;
+    margin-right: 15px;
+    text-transform: uppercase;
+    
+    
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+/*    overflow: hidden;*/
+    display: flex; 
+    align-items: center; 
+}
+
+li {
+    float: left;
+    padding: 0px 15px;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing : 2px;
+    font-size: 12px;
+    
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -ms-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+}
+
+li a:hover {
+    color: #ffcb39;
+}
+
+.btn-request{
+    padding: 10px 25px;
+    border: 1px solid #FFCB39;
+    border-radius: 100px;
+    font-weight: 400;
+}
+
+.btn-request:hover{
+    background-color: #FFCB39;
+    color: #fff;
+    transform: scale(1.05);
+    box-shadow: 0px 20px 20px rgba(0,0,0,0.1);
+}
+
+.btn-go-home{
+    position: relative;
+    z-index: 200;
+    margin: 15px auto;
+    width: 100px;
+    padding: 10px 15px;
+    border: 1px solid #FFCB39;
+    border-radius: 100px;
+    font-weight: 400;
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing : 2px;
+    font-size: 11px;
+    
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -ms-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+}
+
+.btn-go-home:hover{
+    background-color: #FFCB39;
+    color: #fff;
+    transform: scale(1.05);
+    box-shadow: 0px 20px 20px rgba(0,0,0,0.1);
+}
+
+.central-body{
+/*    width: 100%;*/
+    padding: 17% 5% 10% 5%;
+    text-align: center;
+}
+
+.objects img{
+    z-index: 90;
+    pointer-events: none;
+}
+
+.object_rocket{
+    z-index: 95;
+    position: absolute;
+    transform: translateX(-50px);
+    top: 75%;
+    pointer-events: none;
+    animation: rocket-movement 200s linear infinite both running;
+}
+
+.object_earth{
+    position: absolute;
+    top: 20%;
+    left: 15%;
+    z-index: 90;
+/*    animation: spin-earth 100s infinite linear both;*/
+}
+
+.object_moon{
+    position: absolute;
+    top: 12%;
+    left: 25%;
+/*
+    transform: rotate(0deg);
+    transition: transform ease-in 99999999999s;
+*/
+}
+
+.earth-moon{
+    
+}
+
+.object_astronaut{
+    animation: rotate-astronaut 200s infinite linear both alternate;
+}
+
+.box_astronaut{
+    z-index: 110 !important;
+    position: absolute;
+    top: 60%;
+    right: 20%;
+    will-change: transform;
+    animation: move-astronaut 50s infinite linear both alternate;
+}
+
+.image-404{
+    position: relative;
+    z-index: 100;
+    pointer-events: none;
+}
+
+.stars{
+    background: url(http://salehriaz.com/404Page/img/overlay_stars.svg);
+    background-repeat: repeat;
+    background-size: contain;
+    background-position: left top;
+}
+
+.glowing_stars .star{
+    position: absolute;
+    border-radius: 100%;
+    background-color: #fff;
+    width: 3px;
+    height: 3px;
+    opacity: 0.3;
+    will-change: opacity;
+}
+
+.glowing_stars .star:nth-child(1){
+    top: 80%;
+    left: 25%;
+    animation: glow-star 2s infinite ease-in-out alternate 1s;
+}
+.glowing_stars .star:nth-child(2){
+    top: 20%;
+    left: 40%;
+    animation: glow-star 2s infinite ease-in-out alternate 3s;
+}
+.glowing_stars .star:nth-child(3){
+    top: 25%;
+    left: 25%;
+    animation: glow-star 2s infinite ease-in-out alternate 5s;
+}
+.glowing_stars .star:nth-child(4){
+    top: 75%;
+    left: 80%;
+    animation: glow-star 2s infinite ease-in-out alternate 7s;
+}
+.glowing_stars .star:nth-child(5){
+    top: 90%;
+    left: 50%;
+    animation: glow-star 2s infinite ease-in-out alternate 9s;
+}
+
+@media only screen and (max-width: 600px){
+    .navbar-links{
+        display: none;
+    }
+    
+    .custom-navbar{
+        text-align: center;
+    }
+    
+    .brand-logo img{
+        width: 120px;
+    }
+    
+    .box_astronaut{
+        top: 70%;
+    }
+    
+    .central-body{
+        padding-top: 25%;
+    }
+}
+  </style>
+<body class="bg-purple">
+        
+        <div class="stars">
+            <div class="custom-navbar">
+                <div class="brand-logo">
+                </div>
+                <div class="navbar-links">
+                
+                </div>
+            </div>
+            <div class="central-body">
+                <img class="image-404" src="https://github.com/OHvrything/thingEbotWebsite/blob/main/410.png?raw=true" width="300px">
+                <a href="https://teb.kro.kr" class="btn-go-home" target="_blank">사이트가 이전되었습니다. 새 사이트로 이동!</a>
+            </div>
+            <div class="objects">
+                <img class="object_rocket" src="http://salehriaz.com/404Page/img/rocket.svg" width="40px">
+                <div class="earth-moon">
+                    <img class="object_earth" src="http://salehriaz.com/404Page/img/earth.svg" width="100px">
+                    <img class="object_moon" src="http://salehriaz.com/404Page/img/moon.svg" width="80px">
+                </div>
+                <div class="box_astronaut">
+                    <img class="object_astronaut" src="http://salehriaz.com/404Page/img/astronaut.svg" width="140px">
+                </div>
+            </div>
+            <div class="glowing_stars">
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+
+            </div>
+
+        </div>
+
+    </body>
